@@ -13,5 +13,21 @@
     </form>
 
     <p th:text="${message}"></p>
+
+    <h2>Saved Users</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
